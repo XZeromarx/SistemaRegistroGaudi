@@ -4,7 +4,7 @@ package model;
  *
  * @author XZeromarx
  */
-public class Encargado extends Datos{
+public class Encargado{
     
     private String nombre;
     private String rut;

@@ -4,7 +4,7 @@ package model;
  *
  * @author XZeromarx
  */
-public class Pintura extends Datos{
+public class Pintura{
     
     private Autor autor;
     private String tecnica;

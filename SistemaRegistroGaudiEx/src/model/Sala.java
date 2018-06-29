@@ -4,7 +4,7 @@ package model;
  *
  * @author XZeromarx
  */
-public class Sala extends Datos{
+public class Sala{
 
     private String nombreSala;
     private int cantidadDeLamparas;
@@ -77,10 +77,11 @@ public class Sala extends Datos{
     public String getIdentificador() {
         return identificador;
     }
-    public void setIdentificador(){
-        String id = java.util.UUID.randomUUID().toString();
-        identificador = id;
-        this.identificador = id;
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
     }
+
+    
 
 }

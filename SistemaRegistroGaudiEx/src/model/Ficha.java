@@ -4,7 +4,7 @@ package model;
  *
  * @author XZeromarx
  */
-public class Ficha extends Datos{
+public class Ficha{
     
     private Sala sala;
     private Pintura pintura;

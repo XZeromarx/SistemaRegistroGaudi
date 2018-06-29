@@ -107,25 +107,59 @@ INSERT INTO obra VALUES (NULL,'nombre obra 1',1,1,2000,1,1,1,1),
                         (NULL,'nombre obra 4',4,4,2003,4,4,1,3),
                         (NULL,'nombre obra 5',5,5,2004,5,5,3,2);
 
+--registrarObra
+DROP PROCEDURE IF EXISTS registrarObra;
+DELIMITER $$
+CREATE PROCEDURE registrarObra(_nombreObra VARCHAR(100), _tamanio VARCHAR(100),
+                                _anio INT,  _tecnica VARCHAR(100),
+                               _genero VARCHAR(100),  _sala VARCHAR(100),
+                               _autor VARCHAR(100))
+BEGIN
+
+DECLARE _idTecnica INT DEFAULT 0;
+DECLARE _idGenero INT DEFAULT 0;
+DECLARE _idSala INT DEFAULT 0;
+DECLARE _idAutor INT DEFAULT 0;
+DECLARE _altura VARCHAR(100);
+DECLARE _ancho VARCHAR(100);
+
+
+SET _idTecnica = (SELECT id FROM tecnica WHERE nombre = _tecnica);
+SET _idGenero = (SELECT id FROM genero WHERE nombre = _genero);
+SET _idSala = (SELECT id FROM sala WHERE nombre = _sala);
+SET _idAutor = (SELECT id FROM autor WHERE nombre = _autor);
+SET _altura = (SELECT SUBSTRING_INDEX(_tamanio,'x',1));
+SET _ancho = (SELECT SUBSTRING_INDEX(_tamanio,'x',-1));
+
+
+INSERT INTO obra VALUES (NULL,_nombreObra,_altura,
+                        _ancho, _anio,
+                        _idTecnica, _idGenero,
+                        _idSala, _idAutor);
+END $$
+DELIMITER;
+
+CALL registrarObra('obra','12x4',2010,'Acuarela','Retrato','Sala 1','Autor 01');
+
 
 --getObras
 SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica',
 genero.nombre AS 'Género', anioCreacion AS 'Año de creación',
-obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho',
+obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho'
 FROM obra
 INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id
 INNER JOIN genero ON obra.genero_fk = genero.id
-INNER JOIN autor ON obra.autor_fk = autor.id
+INNER JOIN autor ON obra.autor_fk = autor.id;
 
 --buscarObra
 SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica',
 genero.nombre AS 'Género', anioCreacion AS 'Año de creación',
-obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho',
+obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho'
 FROM obra
 INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id
 INNER JOIN genero ON obra.genero_fk = genero.id
 INNER JOIN autor ON obra.autor_fk = autor.id
-WHERE obra.nombre LIKE '%n%'
+WHERE obra.nombre LIKE '%n%';
 
 
 
@@ -133,7 +167,7 @@ WHERE obra.nombre LIKE '%n%'
 SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica',
 genero.nombre AS 'Género', anioCreacion AS 'Año de creación',
 obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho',
-sala.nombre AS 'Ubicación' 
+sala.nombre AS 'Ubicación', obra.id AS 'Id Obra'
 FROM obra
 INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id
 INNER JOIN genero ON obra.genero_fk = genero.id
@@ -144,14 +178,6 @@ INNER JOIN autor ON obra.autor_fk = autor.id;
 DELETE FROM obra
 WHERE obra.id = '1'
 
---registrarObra
-INSERT INTO obra VALUES (NULL,'nombre obra','alto',
-                        'ancho',
-                        'año creacion',
-                        'fk tecnica',
-                        'fk genero',
-                        'fk sala',
-                        'fk autor');
 
 
 
@@ -166,6 +192,9 @@ SELECT nombre FROM tecnica;
 
 -- getAutores
 SELECT nombre FROM autor;
+
+-- getEncargados
+SELECT nombre FROM encargado;
 
 --getusuario (usuario - contraseña)
 
