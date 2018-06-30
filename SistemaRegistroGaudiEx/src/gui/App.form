@@ -1,532 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Container class="javax.swing.JFrame" name="vtnCrearAutor">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" position="2" title="Crear Autor">
-                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
-                  <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
-                </TitledBorder>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtCrearNombreAutor" pref="257" max="32767" attributes="0"/>
-                                  <Component id="txtCrearApellidoAutor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtCrearRutAutor" max="32767" attributes="0"/>
-                                  <Component id="txtCrearNacionalidadAutor" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnCrearAutor" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnSalirCrearAutor" min="-2" pref="184" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCrearNombreAutor" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCrearApellidoAutor" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCrearRutAutor" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCrearNacionalidadAutor" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnSalirCrearAutor" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="btnCrearAutor" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nombre:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Rut:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Apellido:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtCrearNombreAutor">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtCrearApellidoAutor">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtCrearRutAutor">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtCrearNacionalidadAutor">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnSalirCrearAutor">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Salir"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirCrearAutorActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCrearAutor">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Crear Autor"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearAutorActionPerformed"/>
-              </Events>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JFrame" name="vtnRegistroEncargado">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel5" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel5" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel5">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" position="2" title="Registro de Encargados">
-                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
-                  <Font PropertyName="font" name="Lucida Grande" size="14" style="1"/>
-                </TitledBorder>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel18" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel20" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtProfRegistroEncargado" alignment="0" pref="280" max="32767" attributes="0"/>
-                                      <Component id="txtAnioRegistroEncargado" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtRutRegistroEncargado" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="txtNombreRegistroEncargado" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="btnRegistrarEncargado" min="-2" pref="397" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSalirRegistroEncargado" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombreRegistroEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtRutRegistroEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtProfRegistroEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtAnioRegistroEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnSalirRegistroEncargado" pref="44" max="32767" attributes="0"/>
-                          <Component id="btnRegistrarEncargado" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel17">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nombre:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Rut:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel19">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Profesi&#xf3;n:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel20">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;o de Ingreso:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtNombreRegistroEncargado">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtRutRegistroEncargado">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtProfRegistroEncargado">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtAnioRegistroEncargado">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnRegistrarEncargado">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Registrar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarEncargadoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnSalirRegistroEncargado">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Salir"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirRegistroEncargadoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel21">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="solo n&#xfa;meros*"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JFrame" name="vtnRegistroUbicacion">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel8" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel8" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel8">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" position="2" title="Registro Salas">
-                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
-                  <Font PropertyName="font" name="Lucida Grande" size="14" style="1"/>
-                </TitledBorder>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="spCantidadLamparas" pref="156" max="32767" attributes="0"/>
-                                  <Component id="txtNombreRegistroSala" max="32767" attributes="0"/>
-                                  <Component id="spTemperatura" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="rdCierreSi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rdCierreNo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="rdIncendioSi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="rdIncendioNo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="cmbEncargadosRegistroSala" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnRegistrarSala" min="-2" pref="375" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnSalirRegistroSala" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtNombreRegistroSala" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="rdCierreSi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdCierreNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="spCantidadLamparas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdIncendioSi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdIncendioNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="spTemperatura" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cmbEncargadosRegistroSala" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnRegistrarSala" pref="50" max="32767" attributes="0"/>
-                          <Component id="btnSalirRegistroSala" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel22">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Nombre:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel23">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cantidad de lamparas:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel24">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Temperatura:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel25">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cierre Centralizado:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel26">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Alarma Contra Incendios:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel27">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Encargado:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtNombreRegistroSala">
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cmbEncargadosRegistroSala">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="rdCierreSi">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btnGroupCierreC"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Si"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="rdCierreNo">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btnGroupCierreC"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="No"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="rdIncendioSi">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btnGroupAlarmaC"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Si"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="rdIncendioNo">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btnGroupAlarmaC"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="No"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JSpinner" name="spCantidadLamparas">
-            </Component>
-            <Component class="javax.swing.JSpinner" name="spTemperatura">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnRegistrarSala">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Registrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnSalirRegistroSala">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Salir"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.ButtonGroup" name="btnGroupCierreC">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="btnGroupAlarmaC">
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -629,7 +103,6 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -678,6 +151,13 @@
                                   <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
                                   <Component id="btnRegistrar" min="-2" pref="144" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel11" max="32767" attributes="0"/>
+                                      <Component id="jLabel9" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -722,7 +202,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="97" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
                           <Component id="btnRegistrar" min="-2" pref="55" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="btnLimpiarFormulario" min="-2" max="-2" attributes="0"/>
@@ -833,10 +315,13 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Registrar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Porfavor separar ancho y alto con una X"/>
+                    <Property name="text" type="java.lang.String" value="Porfavor separar ancho y alto con una X, si no lo hace"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnLimpiarFormulario">
@@ -871,6 +356,11 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="se le agregar&#xe1; el mismo valor al otro lado de la X"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -922,7 +412,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jPanel7" max="32767" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="830" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1015,6 +505,9 @@
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tblInformacionKeyTyped"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1040,19 +533,18 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtBuscarNombre" alignment="0" pref="160" max="32767" attributes="0"/>
-                                  <Component id="txtBuscarID" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtBuscarAnio" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnBuscar" pref="240" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtBuscarNombre" pref="240" max="32767" attributes="0"/>
+                                      <Component id="txtBuscarID" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnBuscar" min="-2" pref="170" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="347" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" pref="269" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1068,13 +560,9 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtBuscarID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtBuscarAnio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnBuscar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -1102,24 +590,23 @@
                         <Property name="text" type="java.lang.String" value="Por ID:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel15">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="11" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Por a&#xf1;o:"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JTextField" name="txtBuscarNombre">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBuscarNombreActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtBuscarID">
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtBuscarAnio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBuscarIDActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnBuscar">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Buscar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
                       <AuxValues>
