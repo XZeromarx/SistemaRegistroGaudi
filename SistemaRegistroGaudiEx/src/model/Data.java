@@ -16,6 +16,8 @@ public class Data {
     private List<String[]> listaTecnicas;
     private List<Autor> listaAutor;
     private List<String[]> listaEncargados;
+    private List<String[]> listaBusqueda;
+
     public Data() throws ClassNotFoundException, SQLException {
         CON = new Conexion("localhost", "registroGaudi", "root", "");
     }
@@ -119,30 +121,98 @@ public class Data {
     }
 
     public boolean comprobarUsuario(String user, String pass) throws SQLException {
-        query = "SELECT COUNT(*) AS 'user', clave AS 'pass' FROM usuario"
+        query = "SELECT COUNT(*) AS 'user', clave AS 'pass' FROM usuario "
                 + "WHERE nombreUsuario = '" + user + "' AND clave = '" + pass + "';";
         rs = CON.ejecutarSelect(query);
-
         boolean correcto = false;
-        String s;
-        s = rs.getString(1);
+        String s = null;
+        while(rs.next()){
+          s = rs.getString(1);  
+        }
         if (!("0".equalsIgnoreCase(s))) {
             correcto = true;
         }
-
         return correcto;
     }
 
-    public List getNombresEncargados() throws SQLException{
+    public List getNombresEncargados() throws SQLException {
         query = "SELECT nombre FROM encargado;";
         rs = CON.ejecutarSelect(query);
         listaEncargados = new ArrayList<>();
         String[] s;
-        while(rs.next()){
+        while (rs.next()) {
             s = new String[1];
             s[0] = rs.getString(1);
             listaEncargados.add(s);
         }
         return listaEncargados;
+    }
+
+    public List getResultadosBusquedaNombre(String texto) throws SQLException {
+
+        query = "SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica', "
+                + "genero.nombre AS 'Género', anioCreacion AS 'Año de creación', "
+                + "obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho', "
+                + "sala.nombre AS 'Ubicación', obra.id AS 'Id Obra' "
+                + "FROM obra "
+                + "INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id "
+                + "INNER JOIN genero ON obra.genero_fk = genero.id "
+                + "INNER JOIN sala ON obra.sala_fk = sala.id "
+                + "INNER JOIN autor ON obra.autor_fk = autor.id "
+                + "WHERE obra.nombre LIKE '%" + texto + "%';";
+        rs = CON.ejecutarSelect(query);
+        listaBusqueda = new ArrayList<>();
+        String[] s;
+        while (rs.next()) {
+            s = new String[8];
+            s[0] = rs.getString("Nombre Autor");
+            s[1] = rs.getString("Tecnica");
+            s[2] = rs.getString("Género");
+            s[3] = rs.getString("Año de creación");
+            s[4] = rs.getString("Nombre pintura");
+            String alto = rs.getString("alto");
+            String ancho = rs.getString("ancho");
+            s[5] = alto + "x" + ancho;
+            s[6] = rs.getString("Ubicación");
+            s[7] = rs.getString("Id Obra");
+            listaBusqueda.add(s);
+        }
+
+        return listaBusqueda;
+
+    }
+
+    public List getResultadosBusquedaId(String id) throws SQLException {
+
+        query = "SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica', "
+                + "genero.nombre AS 'Género', anioCreacion AS 'Año de creación', "
+                + "obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho', "
+                + "sala.nombre AS 'Ubicación', obra.id AS 'Id Obra' "
+                + "FROM obra "
+                + "INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id "
+                + "INNER JOIN genero ON obra.genero_fk = genero.id "
+                + "INNER JOIN sala ON obra.sala_fk = sala.id "
+                + "INNER JOIN autor ON obra.autor_fk = autor.id "
+                + "WHERE obra.id = " + id + ";";
+        rs = CON.ejecutarSelect(query);
+        listaBusqueda = new ArrayList<>();
+        String[] s;
+        while (rs.next()) {
+            s = new String[8];
+            s[0] = rs.getString("Nombre Autor");
+            s[1] = rs.getString("Tecnica");
+            s[2] = rs.getString("Género");
+            s[3] = rs.getString("Año de creación");
+            s[4] = rs.getString("Nombre pintura");
+            String alto = rs.getString("alto");
+            String ancho = rs.getString("ancho");
+            s[5] = alto + "x" + ancho;
+            s[6] = rs.getString("Ubicación");
+            s[7] = rs.getString("Id Obra");
+            listaBusqueda.add(s);
+        }
+
+        return listaBusqueda;
+
     }
 }
