@@ -126,8 +126,8 @@ public class Data {
         rs = CON.ejecutarSelect(query);
         boolean correcto = false;
         String s = null;
-        while(rs.next()){
-          s = rs.getString(1);  
+        while (rs.next()) {
+            s = rs.getString(1);
         }
         if (!("0".equalsIgnoreCase(s))) {
             correcto = true;
@@ -194,6 +194,40 @@ public class Data {
                 + "INNER JOIN sala ON obra.sala_fk = sala.id "
                 + "INNER JOIN autor ON obra.autor_fk = autor.id "
                 + "WHERE obra.id = " + id + ";";
+        rs = CON.ejecutarSelect(query);
+        listaBusqueda = new ArrayList<>();
+        String[] s;
+        while (rs.next()) {
+            s = new String[8];
+            s[0] = rs.getString("Nombre Autor");
+            s[1] = rs.getString("Tecnica");
+            s[2] = rs.getString("Género");
+            s[3] = rs.getString("Año de creación");
+            s[4] = rs.getString("Nombre pintura");
+            String alto = rs.getString("alto");
+            String ancho = rs.getString("ancho");
+            s[5] = alto + "x" + ancho;
+            s[6] = rs.getString("Ubicación");
+            s[7] = rs.getString("Id Obra");
+            listaBusqueda.add(s);
+        }
+
+        return listaBusqueda;
+
+    }
+
+    public List getResultadosBusquedaSala(String sala) throws SQLException {
+
+        query = "SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica', "
+                + "genero.nombre AS 'Género', anioCreacion AS 'Año de creación', "
+                + "obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho', "
+                + "sala.nombre AS 'Ubicación', obra.id AS 'Id Obra' "
+                + "FROM obra "
+                + "INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id "
+                + "INNER JOIN genero ON obra.genero_fk = genero.id "
+                + "INNER JOIN sala ON obra.sala_fk = sala.id "
+                + "INNER JOIN autor ON obra.autor_fk = autor.id "
+                + "WHERE sala.nombre LIKE '%" + sala + "%';";
         rs = CON.ejecutarSelect(query);
         listaBusqueda = new ArrayList<>();
         String[] s;

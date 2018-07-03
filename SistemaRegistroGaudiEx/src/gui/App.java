@@ -75,6 +75,9 @@ public class App extends javax.swing.JFrame {
         rdNombre = new javax.swing.JRadioButton();
         rdId = new javax.swing.JRadioButton();
         btnMostrarTodo = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        cmbBuscarPorSala = new javax.swing.JComboBox<>();
+        rdSala = new javax.swing.JRadioButton();
         pnllogin = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -213,7 +216,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
         );
@@ -339,30 +342,54 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setText("Por Sala:");
+
+        cmbBuscarPorSala.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cmbBuscarPorSalaMouseClicked(evt);
+            }
+        });
+
+        btnGBusqueda.add(rdSala);
+        rdSala.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rdSalaMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMostrarTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
-                            .addComponent(jLabel14))
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtBuscarNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                            .addComponent(txtBuscarID))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rdNombre)
-                            .addComponent(rdId)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnMostrarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtBuscarNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                    .addComponent(txtBuscarID))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rdNombre)
+                                    .addComponent(rdId)))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(cmbBuscarPorSala, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdSala, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(75, 75, 75)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106))
@@ -370,25 +397,30 @@ public class App extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(txtBuscarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rdNombre))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(txtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel14))
                             .addComponent(rdId))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnMostrarTodo))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cmbBuscarPorSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel15))
+                            .addComponent(rdSala))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMostrarTodo)
+                            .addComponent(btnBuscar)))
+                    .addComponent(jScrollPane2))
                 .addContainerGap())
         );
 
@@ -410,7 +442,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -445,7 +477,7 @@ public class App extends javax.swing.JFrame {
         );
         vtnPrincipalLayout.setVerticalGroup(
             vtnPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGap(0, 562, Short.MAX_VALUE)
             .addGroup(vtnPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(vtnPrincipalLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -618,6 +650,19 @@ public class App extends javax.swing.JFrame {
                     }
                 }
 
+            } else if (rdSala.isSelected()) {
+                List<String[]> listaBusqueda = d.getResultadosBusquedaSala(cmbBuscarPorSala.getSelectedItem().toString());
+                for (String[] busqueda : listaBusqueda) {
+                    tabDatos.addRow(new Object[8]);
+                    tabDatos.setValueAt(busqueda[0], tabDatos.getRowCount() - 1, 0);
+                    tabDatos.setValueAt(busqueda[1], tabDatos.getRowCount() - 1, 1);
+                    tabDatos.setValueAt(busqueda[2], tabDatos.getRowCount() - 1, 2);
+                    tabDatos.setValueAt(busqueda[3], tabDatos.getRowCount() - 1, 3);
+                    tabDatos.setValueAt(busqueda[4], tabDatos.getRowCount() - 1, 4);
+                    tabDatos.setValueAt(busqueda[5], tabDatos.getRowCount() - 1, 5);
+                    tabDatos.setValueAt(busqueda[6], tabDatos.getRowCount() - 1, 6);
+                    tabDatos.setValueAt(busqueda[7], tabDatos.getRowCount() - 1, 7);
+                }
             }
 
         } catch (SQLException sQLException) {
@@ -627,39 +672,52 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void txtBuscarNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBuscarNombreMouseClicked
+
         txtBuscarID.setText("");
         txtBuscarID.setEnabled(false);
         txtBuscarNombre.setEnabled(true);
         txtBuscarNombre.requestFocus();
         rdNombre.setSelected(true);
         rdId.setSelected(false);
+        cmbBuscarPorSala.setEnabled(false);
+        cmbBuscarPorSala.setSelectedIndex(0);
+
     }//GEN-LAST:event_txtBuscarNombreMouseClicked
 
     private void txtBuscarIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBuscarIDMouseClicked
+
         txtBuscarNombre.setText("");
         txtBuscarNombre.setEnabled(false);
         txtBuscarID.setEnabled(true);
         txtBuscarID.requestFocus();
         rdNombre.setSelected(false);
         rdId.setSelected(true);
+        cmbBuscarPorSala.setEnabled(false);
+        cmbBuscarPorSala.setSelectedIndex(0);
+
     }//GEN-LAST:event_txtBuscarIDMouseClicked
 
     private void rdIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdIdActionPerformed
+
         txtBuscarNombre.setText("");
         txtBuscarNombre.setEnabled(false);
         txtBuscarID.setEnabled(true);
         txtBuscarID.requestFocus();
         rdNombre.setSelected(false);
         rdId.setSelected(true);
+        cmbBuscarPorSala.setEnabled(false);
+
     }//GEN-LAST:event_rdIdActionPerformed
 
     private void rdNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdNombreActionPerformed
+
         txtBuscarID.setText("");
         txtBuscarID.setEnabled(false);
         txtBuscarNombre.setEnabled(true);
         txtBuscarNombre.requestFocus();
         rdNombre.setSelected(true);
         rdId.setSelected(false);
+        cmbBuscarPorSala.setEnabled(false);
 
     }//GEN-LAST:event_rdNombreActionPerformed
 
@@ -718,6 +776,32 @@ public class App extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txtPassKeyTyped
 
+    private void cmbBuscarPorSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbBuscarPorSalaMouseClicked
+
+        txtBuscarID.setText("");
+        txtBuscarNombre.setText("");
+        txtBuscarID.setEnabled(false);
+        txtBuscarNombre.setEnabled(false);
+        rdNombre.setSelected(false);
+        rdId.setSelected(false);
+        rdSala.setSelected(true);
+        cmbBuscarPorSala.setEnabled(true);
+
+    }//GEN-LAST:event_cmbBuscarPorSalaMouseClicked
+
+    private void rdSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rdSalaMouseClicked
+
+        txtBuscarID.setText("");
+        txtBuscarNombre.setText("");
+        txtBuscarID.setEnabled(false);
+        txtBuscarNombre.setEnabled(false);
+        rdNombre.setSelected(false);
+        rdId.setSelected(false);
+        rdSala.setSelected(true);
+        cmbBuscarPorSala.setEnabled(true);
+
+    }//GEN-LAST:event_rdSalaMouseClicked
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
@@ -738,6 +822,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton btnMostrarTodo;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JComboBox<String> cmbAutores;
+    private javax.swing.JComboBox<String> cmbBuscarPorSala;
     private javax.swing.JComboBox<String> cmbEncargado;
     private javax.swing.JComboBox<String> cmbGenero;
     private javax.swing.JComboBox<String> cmbTecnica;
@@ -748,6 +833,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -767,6 +853,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel pnllogin;
     private javax.swing.JRadioButton rdId;
     private javax.swing.JRadioButton rdNombre;
+    private javax.swing.JRadioButton rdSala;
     private javax.swing.JSpinner spAnioCreacion;
     private javax.swing.JTabbedPane tabPrincipal;
     private javax.swing.JTable tblInformacion;
@@ -841,10 +928,11 @@ public class App extends javax.swing.JFrame {
 
     private void leerSalas() throws SQLException {
         cmbUbicacion.removeAllItems();
-
+        cmbBuscarPorSala.removeAllItems();
         List<Sala> listaSalas = d.getNombreSalas();
         for (Sala sala : listaSalas) {
             cmbUbicacion.addItem(sala.getNombreSala());
+            cmbBuscarPorSala.addItem(sala.getNombreSala());
         }
 
     }

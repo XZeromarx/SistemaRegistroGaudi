@@ -151,6 +151,27 @@ DELIMITER;
 -- CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS
 
 
+SELECT autor.nombre AS 'Nombre Autor', tecnica.nombre AS 'Tecnica', 
+                genero.nombre AS 'Género', anioCreacion AS 'Año de creación', 
+                obra.nombre AS 'Nombre pintura', tamanio_alto AS 'alto', tamanio_ancho AS 'Ancho', 
+                sala.nombre AS 'Ubicación', obra.id AS 'Id Obra' 
+                FROM obra 
+                INNER JOIN tecnica ON obra.tecnica_fk = tecnica.id 
+                INNER JOIN genero ON obra.genero_fk = genero.id 
+                INNER JOIN sala ON obra.sala_fk = sala.id 
+                INNER JOIN autor ON obra.autor_fk = autor.id 
+                WHERE sala.nombre LIKE '%Sala 1%';
+
+
+
+
+
+
+
+
+
+
+
 CALL registrarObra('obra','12x4',2010,'Acuarela','Retrato','Sala 1','Autor 01');
 
 
