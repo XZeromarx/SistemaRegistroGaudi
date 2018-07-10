@@ -17,9 +17,10 @@ public class Data {
     private List<Autor> listaAutor;
     private List<String[]> listaEncargados;
     private List<String[]> listaBusqueda;
+    private List<Autor> listaCompletaAutores;
 
     public Data() throws ClassNotFoundException, SQLException {
-        CON = new Conexion("localhost", "registroGaudi", "root", "");
+        CON = new Conexion("localhost", "registroGaudi", "root", "Olakease123");
     }
 
     public List getObrasYSalas() throws SQLException {
@@ -249,4 +250,29 @@ public class Data {
         return listaBusqueda;
 
     }
+
+    public List getAutores() throws SQLException {
+        listaCompletaAutores = new ArrayList<>();
+        query = "SELECT nombre AS 'Nombre', apellido AS 'Apellido', rut AS 'Rut', nacionalidad AS 'Nacionalidad' FROM autor;";
+        rs = CON.ejecutarSelect(query);
+        Autor a;
+        while (rs.next()) {
+            a = new Autor();
+            a.setNombre(rs.getString("Nombre"));
+            a.setApellido(rs.getString("Apellido"));
+            a.setRut(rs.getString("Rut"));
+            a.setNacionalidad(rs.getString("Nacionalidad"));
+            listaCompletaAutores.add(a);
+        }
+        return listaCompletaAutores;
+    }
+
+    public void registrarAutor(String nombre, String apellido, String rut, String nacionalidad) throws SQLException {
+
+        query = "INSERT INTO autor VALUES(NULL,'" + nombre + "','" + apellido + "' ,'" + rut + "' ,'" + nacionalidad + "' );";
+        CON.ejecutar(query);
+        CON.close();
+
+    }
+
 }

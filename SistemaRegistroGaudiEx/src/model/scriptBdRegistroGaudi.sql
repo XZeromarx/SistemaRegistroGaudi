@@ -78,7 +78,8 @@ apellido VARCHAR(100),
 rut VARCHAR(100),
 nacionalidad VARCHAR(100)
 );
-
+ 
+SELECT * FROM autor
 
 INSERT INTO autor VALUES (NULL, 'Autor 01','Apellido 01','11-1','Nacionalidad 1'),
                          (NULL, 'Autor 02','Apellido 02','22-2','Nacionalidad 2'),
